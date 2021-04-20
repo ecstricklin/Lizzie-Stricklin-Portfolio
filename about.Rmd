@@ -1,0 +1,9 @@
+---
+title: "About Me"
+description: |
+  Lizzie is a senior studying journalism at The George Washington University’s School of Media and Public Affairs in Washington, DC. At SMPA, Lizzie has developed her skills in newswriting, video production, and reporting. She is passionate about the environment, the arts, and social justice and is currently seeking full-time opportunities in the environmental media field. Lizzie contributes written and video content for Planet Forward and is currently interning with the Mother Earth Podcast. When she isn’t writing, Lizzie enjoys fencing and rollerblading.
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```

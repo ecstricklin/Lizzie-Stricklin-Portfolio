@@ -1,0 +1,20 @@
+{
+  "articles": [
+    {
+      "path": "about.html",
+      "title": "About Me",
+      "description": "Lizzie is a senior studying journalism at The George Washington University’s School of Media and Public Affairs in Washington, DC. At SMPA, Lizzie has developed her skills in newswriting, video production, and reporting. She is passionate about the environment, the arts, and social justice and is currently seeking full-time opportunities in the environmental media field. Lizzie contributes written and video content for Planet Forward and is currently interning with the Mother Earth Podcast. When she isn’t writing, Lizzie enjoys fencing and rollerblading.",
+      "author": [],
+      "contents": "\r\n\r\n\r\n\r\n",
+      "last_modified": "2021-04-20T10:17:48-04:00"
+    },
+    {
+      "path": "index.html",
+      "title": "Lizzie Stricklin",
+      "author": [],
+      "contents": "\r\n\r\n\r\n\r\n",
+      "last_modified": "2021-04-20T10:17:49-04:00"
+    }
+  ],
+  "collections": ["posts/posts.json"]
+}

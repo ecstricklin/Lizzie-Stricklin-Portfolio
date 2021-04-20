@@ -1,0 +1,80 @@
+---
+title: "Consumer Complaints"
+description: |
+  This is my analysis of consumer complaints handled by the Consumer Financial Protection Bureau between March and December 2020.
+author:
+  - name: Lizzie Stricklin
+    url: https://example.com/norajones
+date: 04-19-2021
+output:
+  distill::distill_article:
+    self_contained: false
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+
+library(flexdashboard)
+library(tidyverse)
+library(plotly)
+library(tigris)
+library(tmap)
+library(tmaptools)
+library(leaflet)
+library(DT)
+complaints <- readRDS("~/github_stricklin/Data-Journalism-Consumer-Complaints/complaints.rds")
+
+states <- tigris::states(cb=T)
+complaints3 <- complaints %>%
+  count(state)
+complaints3_joined <- geo_join(states, complaints3, "STUSPS", "state")
+
+mypalette <- colorNumeric("YlOrRd", domain = complaints3_joined$n)
+
+popup_fcc <- paste0("Consumer Complaints Mar-Dec 2020: ", as.character(complaints3_joined$n))
+
+map <- leaflet(complaints3_joined) %>% 
+  addTiles() %>% 
+    setView(-98.483330, 38.712046, zoom = 4) %>% 
+      addPolygons(data = states, fillColor = ~mypalette(complaints3_joined$n), fillOpacity = 0.9, weight = 0.2, smoothFactor = 0.2, label = popup_fcc) %>% 
+        addLegend(pal=mypalette, values=complaints3_joined$n, bins=5, position="bottomright", title="Consumer Complaints Mar-Dec 2020", labFormat=labelFormat(digits=0))
+```
+
+The Consumer Financial Protection Bureau has released data from March - December 2020 chronicling "complaints about consumer financial products and services" the bureau has sent to companies for response. According to the CFPB, "Complaints are published after the company responds, confirming a commercial relationship with the consumer, or after 15 days, whichever comes first. Complaints referred to other regulators, such as complaints about depository institutions with less than $10 billion in assets, are not published in the Consumer Complaint Database."
+
+Below is the map detailing the number of complaints sent to companies between March and December 2020. The states with the most consumer complaints were Florida, California, and Texas.
+
+```{r}
+map
+```
+
+Customer complaints rose over the nine month time span, hitting a peak of 2,182 complaints on December 29.
+
+```{r}
+complaints2 <- complaints %>%
+  count(date_received)
+
+fig <- plot_ly(complaints2, x = ~date_received, y = ~n, type = 'scatter', mode = 'lines')
+fig %>% layout(title = 'Number of Customer Complaints per Day', yaxis=list(title = 'Number of Complaints'), xaxis = list(title='Date Received'))
+#fig
+```
+
+The majority of complaints were sent to Experian Information Solutions, Inc., Transunion Intermediate Holdings, Inc., and Equifax, Inc. 31% of the complaints were sent to one of 3,040 other companies, each representing less than 1% of the complaint recipients respectively.
+
+```{r}
+complaints4 <- complaints %>%
+  count(company)
+
+complaints4.0 <- complaints4 %>% filter(n > 4000)
+complaints4.1 <- complaints4 %>% filter(n < 4000)
+complaints4.2 <- sum(complaints4.1$n)
+complaints4.3 <- c("Other",complaints4.2)
+complaints5 <- rbind(complaints4.0, complaints4.3)
+
+fig3 <- complaints5 %>% plot_ly(labels = ~company, values = ~n)
+fig3 <- fig3 %>% add_pie(hole = 0.6)
+fig3 <- fig3 %>% layout(title = "Companies Receiving Complaints in 2020", showlegend = F, xaxis = list(showgrid = FALSE, zerloine = FALSE, showticklabels = FALSE), yaxis = list(showgrid = FALSE, zerloine = FALSE, showticklabels = FALSE))
+fig3
+```
+

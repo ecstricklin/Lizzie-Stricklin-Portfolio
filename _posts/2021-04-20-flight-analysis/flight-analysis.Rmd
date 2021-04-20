@@ -1,0 +1,133 @@
+---
+title: "Flight Analysis"
+description: |
+  This is my analysis of 2013 data on domestic flights originating in New York.
+author:
+  - name: Lizzie Stricklin
+    url: https://example.com/norajones
+date: 04-20-2021
+output:
+  distill::distill_article:
+    self_contained: false
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+
+#first load the libraries we'll need
+library(tidyverse)
+library(plotly)
+library(nycflights13) # <- make sure to install this package
+library(DT)
+flights <- nycflights13::flights
+```
+
+This bar chart shows the breakdown of flights by airline that originate at JFK airport and are more than 400 minutes in length. Hawaiian Airlines runs the majority of these long flights coming from JFK.
+
+```{r}
+#setting up data
+
+flights_by_origin_airtime_agg <- function(x,y)
+{
+  flights <- flights %>% 
+    filter(origin == x) %>% 
+      filter(air_time > y) %>% 
+        count(carrier)
+  return(flights)
+}
+
+q7_data <- flights_by_origin_airtime_agg("JFK",400)
+
+#plotting data
+
+fig <- plot_ly(
+  data = q7_data,
+  x = ~carrier,
+  y = ~n,
+  type = "bar"
+)
+
+fig <- fig %>% 
+  layout(title = "Long Flights from JFK")
+
+fig
+```
+
+This bar chart shows which destination airports have the most flights with durations of over 400 minutes. Daniel K. Inouye International Airport in Honolulu receives the majority of these long flights.
+
+```{r}
+#setting up data
+
+long_flights <- function(y)
+{
+  flights <- flights %>% 
+    filter(air_time > y) %>% 
+      count(dest)
+  return(flights)
+}
+
+q8_data <- long_flights(400)
+
+#plotting data
+
+fig <- plot_ly(
+  data = q8_data,
+  x = ~dest,
+  y = ~n,
+  type = "bar"
+)
+
+fig <- fig %>% 
+  layout(title = "Long Flight Destinations")
+
+fig
+```
+
+This donut chart shows the share each airline has of flights with a destination of Daniel K. Inouye International Airport in Honolulu. Flights are nearly evenly shared between Hawaiian Airlines and United Airlines.
+
+```{r}
+#setting up data
+
+share_of_flights <- function(x)
+{
+  flights <- flights %>% 
+    filter(dest == x) %>% 
+      count(carrier)
+  return(flights)
+}
+
+q9_data <- share_of_flights("HNL")
+
+#plotting data
+
+fig <- q9_data %>% 
+  plot_ly(labels = ~carrier, values = ~n)
+fig <- fig %>% add_pie(hole = 0.6)
+fig <- fig %>% layout(title = "Flights Heading to Daniel K. Inouye International Airport")
+
+fig
+```
+
+This scatterplot shows the relationship between the departure delay and arrival delay of flights heading to Daniel K. Inouye International Airport in Honolulu.
+
+```{r}
+#setting up data
+
+HNL_delays <- function(x)
+{
+  flights <- flights %>% 
+    filter(dest == x)
+  return(flights)
+}
+
+q10_data <- HNL_delays("HNL")
+
+#plotting data
+
+fig <- plot_ly(data = q10_data, x = ~dep_delay, y = ~arr_delay)
+fig <- fig %>% layout(title = "Delays in Flights to Daniel K. Inouye International Airport")
+
+fig
+```
+
