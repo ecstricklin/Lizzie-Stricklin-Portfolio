@@ -24,10 +24,10 @@ navbar:
           href: https://www.planetforward.org/idea/farmers-markets-pandemic-dc
         - text: "South African Environmental Justice Activists Push Toward Change"  
           href: https://www.planetforward.org/idea/environmental-justice-south-africa
+        - text: "How Do You Speak for the River?"
+          href: https://www.planetforward.org/idea/speak-river
         - text: "Consumer Complaints Analysis"
           href: posts/2021-04-19-consumer-complaints/
-        - text: "Flight Analysis"
-          href: posts/2021-04-20-flight-analysis/
 output: distill::distill_article
 collections:
   posts:

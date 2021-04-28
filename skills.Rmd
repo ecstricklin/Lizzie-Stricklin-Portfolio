@@ -38,6 +38,7 @@ fig <- plot_ly(
 )
 
 fig %>% layout(title = '', yaxis=list(title = ''), xaxis = list(title='Level of Proficiency'))
+
 ```
 
 
