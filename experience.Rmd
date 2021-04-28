@@ -1,0 +1,148 @@
+---
+title: "Experience"
+#description: |
+  #A new article created using the Distill format.
+#author:
+  #- name: Nora Jones 
+    #url: https://example.com/norajones
+    #affiliation: Spacely Sprockets
+    #affiliation_url: https://example.com/spacelysprokets
+date: "`r Sys.Date()`"
+output: distill::distill_article
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+<h2>Work Experience</h2>
+
+<h3>Planet Forward - Correspondent</h3>
+
+Mar. 2019 – Present
+
+Washington, DC
+
+•	Published online articles and videos covering sustainability stories, including food waste and water pollution.
+
+•	Finalist in 2020 Storyfest competition for Best Multimedia Story.
+
+<h3>Mother Earth Podcast – Production Intern</h3>
+
+Jan. 2021 – Present
+
+Remote
+
+•	Assisted with entire production process, including researching guests, editing interview transcripts, and writing episode scripts.
+
+<h3>The YEARS Project – Enviro. Research & Journalism Intern</h3>
+
+Sept. 2020 – Dec. 2020
+
+Remote
+
+•	Wrote blog posts highlighting local climate issues, synthesized political and climate news and research, moderated social media channels, assisted with video production. 
+
+<h3>American News Women’s Club – Club Admin. Coordinator</h3>
+
+May 2020 – Aug. 2020
+
+Washington, DC
+
+•	Crafted Club newsletter and facilitated communications and renewals among 130+ members.
+
+•	Hosted Club events, maintained external media channels, and managed operations of historic Clubhouse.
+
+<h3>Potomac Conservancy – Communications Intern</h3>
+
+Sep. 2019 – Dec. 2019
+
+Silver Spring, MD
+
+•	Assisted with running social media accounts, including Facebook, Twitter, and Instagram, and wrote blog posts.
+
+•	Maintained event calendar and analyzed volunteer demographic data.
+
+<h3>SMPA Media and Peacebuilding Project – Research Assistant</h3>
+
+Feb. 2019 – Aug. 2019
+
+Washington, DC
+
+•	Led team of three research assistants in coding computer-generated data based on a Hate Speech Intensity Scale.
+
+•	Created code book and used content analysis and data visualization to develop report on hate speech in the media.
+
+•	Assisted with multiple projects, including organizing a conference and researching global hate speech.
+
+<h3>The GW Hatchet – Staff Writer</h3>
+
+Sept. 2017 – Dec. 2018
+
+Washington, DC
+
+•	Published weekly articles for the Metro beat covering local government, transportation, and the GW Hospital.
+
+•	Interviewed and built relationships with beat sources including ANC commissioners and District agencies.
+
+•	Worked with other reporters to cover live events and pitch and produce professional articles using AP style.
+
+<h3>Lavner Camps and Programs – Technology Instructor</h3>
+
+June 2017 – Aug. 2018
+
+Fort Washington, PA
+
+•	Instructed camps in Programming with Java and Python, LEGO EV3 Robotics, and Filmmaking with iMovie.
+
+•	Instructed and supervised children aged 5-14 and developed interpersonal skills by working with other instructors.
+
+<h3>Chestnut Hill Local – Intern</h3>
+
+June 2016 – Aug. 2016
+
+Philadelphia, PA
+
+•	Wrote, pitched, and published weekly articles, working closely with the editor-in-chief.
+
+•	Researched, conducted interviews, and took photographs to add detail to the articles.
+
+<h2>Volunteer Experience</h2>
+
+<h3>GWU Alternative Breaks  – Participant</h3>
+
+Jan. 2019 – Jan. 2020
+
+Various
+
+•	Participated on two alternative breaks service-learning trips to learn about sustainable agriculture in Puerto Rico and migrant workers’ rights in Immokalee, FL.
+
+<h2>Extracurricular Activities</h2>
+
+<h3>GWU Club Fencing – President</h3>
+
+Sept. 2017 – Present
+
+Washington, DC
+
+•	Trained new fencers and led the team in practice and tournaments.
+
+<h3>GWU Wind Ensemble & Symphonic Band – Oboist</h3>
+
+Sept. 2017 – Present
+
+Washington, DC
+
+<h3>PWHS Town Crier School Newspaper – Editor-in-Chief</h3>
+
+Sept. 2014 – June 2017
+
+Plymouth Meeting, PA
+
+•	Developed the newspaper's first website, greatly increased membership and visibility.
+
+•	Published articles in every issue during high school career.
+
+
+
+

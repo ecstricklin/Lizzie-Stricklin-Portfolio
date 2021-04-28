@@ -3,10 +3,32 @@ title: "Lizzie Stricklin"
 description: |
   Lizzie Stricklin Portfolio
 output_dir: "_site"
+base_url: "https://ecstricklin.netlify.app/"
 navbar:
   right:
     - text: "Home"
       href: index.html
     - text: "About"
       href: about.html
+    - text: "Experience"
+      href: experience.html
+    - text: "Skills"
+      href: skills.html
+    - text: "Work Samples"
+      menu:
+        - text: "New Life for the Chesapeake Bay"
+          href: https://www.planetforward.org/idea/chesapeake-bay-protection
+        - text: "Missing the Mark on Climate Education"
+          href: https://theyearsproject.com/learn/news/missing-the-mark-on-climate-education
+        - text: "Farmers Markets: The Underdogs of 2020"
+          href: https://www.planetforward.org/idea/farmers-markets-pandemic-dc
+        - text: "South African Environmental Justice Activists Push Toward Change"  
+          href: https://www.planetforward.org/idea/environmental-justice-south-africa
+        - text: "Consumer Complaints Analysis"
+          href: posts/2021-04-19-consumer-complaints/
+        - text: "Flight Analysis"
+          href: posts/2021-04-20-flight-analysis/
 output: distill::distill_article
+collections:
+  posts:
+    share: [twitter, linkedin, facebook]

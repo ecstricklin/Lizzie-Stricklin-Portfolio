@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>Lizzie Stricklin</title>
+    <link>https://ecstricklin.netlify.app/</link>
+    <atom:link href="https://ecstricklin.netlify.app/index.xml" rel="self" type="application/rss+xml"/>
+    <description>Lizzie Stricklin Portfolio
+</description>
+    <generator>Distill</generator>
+    <lastBuildDate>Tue, 20 Apr 2021 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>Flight Analysis</title>
+      <dc:creator>Lizzie Stricklin</dc:creator>
+      <link>https://ecstricklin.netlify.app/posts/2021-04-20-flight-analysis</link>
+      <description>This is my analysis of 2013 data on domestic flights originating in New York.</description>
+      <guid>https://ecstricklin.netlify.app/posts/2021-04-20-flight-analysis</guid>
+      <pubDate>Tue, 20 Apr 2021 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Consumer Complaints</title>
+      <dc:creator>Lizzie Stricklin</dc:creator>
+      <link>https://ecstricklin.netlify.app/posts/2021-04-19-consumer-complaints</link>
+      <description>This is my analysis of consumer complaints handled by the Consumer Financial Protection Bureau between March and December 2020.</description>
+      <guid>https://ecstricklin.netlify.app/posts/2021-04-19-consumer-complaints</guid>
+      <pubDate>Mon, 19 Apr 2021 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Welcome to my portfolio!</title>
+      <dc:creator>Lizzie Stricklin</dc:creator>
+      <link>https://ecstricklin.netlify.app/posts/welcome</link>
+      <description>Welcome to my portfolio, where I will showcase some of my written pieces, digital media, and data analysis. Please contact me with any notes or questions.</description>
+      <guid>https://ecstricklin.netlify.app/posts/welcome</guid>
+      <pubDate>Mon, 19 Apr 2021 00:00:00 +0000</pubDate>
+    </item>
+  </channel>
+</rss>
